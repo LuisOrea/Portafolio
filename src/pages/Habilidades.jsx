@@ -1,232 +1,109 @@
-import {useState} from "react";
+import { useState, useEffect } from "react";
 import { useTheme } from "../components/ThemeContext";
 
-export default function Habilidades() {
-    const [skillSection, setSkillSection] = useState("Lenguajes");
-    const { theme } = useTheme();
+// Hook para detectar si es móvil/tablet
+function useIsMobile() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 600);
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 600);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  return isMobile;
+}
 
-    const handleSectionChange = (section) => {
-        setSkillSection(section);
-    };
+// Carrusel para móvil/tablet
+function SkillCarousel({ skills }) {
+  const [index, setIndex] = useState(0);
+  if (!skills || skills.length === 0) return null;
+  const prevSkill = () => setIndex(index === 0 ? skills.length - 1 : index - 1);
+  const nextSkill = () => setIndex(index === skills.length - 1 ? 0 : index + 1);
 
   return (
-    <div
-      className={`${theme === "Light" ? "container-dark" : "container-light"}`}
-    >
+    <div className="skills-carousel">
+      <button className="carousel-btn" onClick={prevSkill} aria-label="Anterior">&#8592;</button>
+      <div className="skill-item">
+        <img src={skills[index].img} alt={skills[index].alt} width={skills[index].width} />
+        <b>{skills[index].label}</b>
+      </div>
+      <button className="carousel-btn" onClick={nextSkill} aria-label="Siguiente">&#8594;</button>
+    </div>
+  );
+}
+
+const skillsData = {
+  Lenguajes: [
+    { img: "/public/java-script-js-seeklogo.png", alt: "JavaScript-logo", label: "JavaScript", width: 50 },
+    { img: "/public/Java-logo.svg", alt: "Java-logo", label: "Java", width: 53.5 },
+    { img: "/public/Python-logo.svg", alt: "Python-logo", label: "Python", width: 75 },
+  ],
+  "Frameworks y Librerías": [
+    { img: "/public/React-logo.svg", alt: "React-logo", label: "React Js", width: 80 },
+    { img: "/public/Angular-logo.svg", alt: "Angular-logo", label: "Angular", width: 69 },
+    { img: "/public/Vue-js.svg", alt: "Vue-logo", label: "Vue.js", width: 85 },
+    { img: "/public/Lit-logo.svg", alt: "Lit-logo", label: "Lit Element", width: 60 },
+  ],
+  Testing: [
+    { img: "/public/Jest-logo.svg", alt: "Jest-logo", label: "Jest Js", width: 60 },
+    { img: "/public/Mocha-logo.svg", alt: "Mocha-logo", label: "Mocha Js", width: 60 },
+    { img: "/public/Chai-logo.svg", alt: "Chai-logo", label: "Chai Js", width: 60 },
+  ],
+  "Control de Versiones": [
+    { img: "/public/Git-logo.svg", alt: "Git-logo", label: "Git", width: 60 },
+    { img: "/public/GitHub-logo.svg", alt: "GitHub-logo", label: "GitHub", width: 60 },
+    { img: "/public/Bit-logo.svg", alt: "Bitbucket-logo", label: "Bitbucket", width: 60 },
+  ],
+  Estilos: [
+    { img: "/public/Tw-logo.svg", alt: "Tailwind-logo", label: "Tailwind CSS", width: 98 },
+    { img: "/public/Bs-logo.svg", alt: "Bootstrap-logo", label: "Bootstrap", width: 60 },
+  ],
+  "Otras Habilidades": [
+    { img: "/public/PS-logo.svg", alt: "Photoshop-logo", label: "Photoshop", width: 60 },
+    { img: "/public/Figma-logo.svg", alt: "Figma-logo", label: "Figma", width: 40 },
+    { img: "/public/AI-logo.svg", alt: "Illustrator-logo", label: "Illustrator", width: 62 },
+    { img: "/public/camera.png", alt: "Photography-logo", label: "Fotografía", width: 75 },
+    { img: "/public/wordpress-icon.svg", alt: "WordPress-logo", label: "WordPress", width: 60 },
+  ],
+};
+
+export default function Habilidades() {
+  const [skillSection, setSkillSection] = useState("Lenguajes");
+  const { theme } = useTheme();
+  const isMobile = useIsMobile();
+
+  const handleSectionChange = (section) => {
+    setSkillSection(section);
+  };
+
+  return (
+    <div className={`${theme === "Light" ? "container-dark" : "container-light"}`}>
       <div className={`${theme === "Light" ? "description-container-dark" : "description-container-light"}`}>
         <h2 className="title-skills">Habilidades</h2>
-        <div className="languages">
-          <h2
-            onClick={() => handleSectionChange("Lenguajes")}
-            className="subtitle"
-          >
-            Lenguajes
-          </h2>
-          {skillSection === "Lenguajes" && (
-            <ul>
-              <li>
-                <img
-                  src="/public/java-script-js-seeklogo.png"
-                  alt="JavaScript-logo"
-                  width={50}
-                />
-                <b>JavaScript</b>
-              </li>
-              <li>
-                <img src="/public/Java-logo.svg" alt="Java-logo" width={53.5} />
-                <b>Java</b>
-              </li>
-              <li>
-                <img
-                  src="/public/Python-logo.svg"
-                  alt="Python-logo"
-                  width={75}
-                />
-                <b>Python</b>
-              </li>
-            </ul>
-          )}
-        </div>
-        <div className="frameworks">
-          <h2
-            onClick={() => handleSectionChange("Frameworks y Librerías")}
-            className="subtitle"
-          >
-            Frameworks y Librerías
-          </h2>
-          {skillSection === "Frameworks y Librerías" && (
-            <ul>
-              <li>
-                <img src="/public/React-logo.svg" alt="" width={80} />
-                <b>React Js</b>
-              </li>
-              <li>
-                <img
-                  src="/public/Angular-logo.svg"
-                  alt="Angular-logo"
-                  width={69}
-                />
-                <b>Angular</b>
-              </li>
-              <li>
-                <img src="/public/Vue-js.svg" alt="Vue-logo" width={85} />
-                <b>Vue.js</b>
-              </li>
-              <li>
-                <img src="/public/Lit-logo.svg" alt="Lit-logo" width={60} />
-                <b>Lit Element</b>
-              </li>
-            </ul>
-          )}
-        </div>
-        <div className="testing">
-          <h2
-            onClick={() => handleSectionChange("Testing")}
-            className="subtitle"
-          >
-            Testing
-          </h2>
-          {skillSection === "Testing" && (
-            <ul>
-              <li>
-                <img src="/public/Jest-logo.svg" alt="Jest-logo" width={60} />
-                <b>Jest Js</b>
-              </li>
-              <li>
-                <img src="/public/Mocha-logo.svg" alt="Mocha-logo" width={60} />
-                <b>Mocha Js</b>
-              </li>
-              <li>
-                <img src="/public/Chai-logo.svg" alt="Chai-logo" width={60} />
-                <b>Chai Js</b>
-              </li>
-            </ul>
-          )}
-        </div>
-        <div className="version-control">
-          <h2
-            onClick={() => handleSectionChange("Control de Versiones")}
-            className="subtitle"
-          >
-            Control de Versiones
-          </h2>
-          {skillSection === "Control de Versiones" && (
-            <ul>
-              <li>
-                <img src="/public/Git-logo.svg" alt="Git-logo" width={60} />
-                <b>Git</b>
-              </li>
-              <li>
-                <img
-                  src="/public/GitHub-logo.svg"
-                  alt="GitHub-logo"
-                  width={60}
-                />
-                <b>GitHub</b>
-              </li>
-              <li>
-                <img
-                  src="/public/Bit-logo.svg"
-                  alt="Bitbucket-logo"
-                  width={60}
-                />
-                <b>Bitbucket</b>
-              </li>
-            </ul>
-          )}
-        </div>
-        <div className="css">
-          <h2
-            onClick={() => handleSectionChange("Estilos")}
-            className="subtitle"
-          >
-            Estilos
-          </h2>
-          {skillSection === "Estilos" && (
-            <ul>
-              <li>
-                <img src="/public/Tw-logo.svg" alt="Tailwind-logo" width={98} />
-                <b>Tailwind CSS</b>
-              </li>
-              <li>
-                <img
-                  src="/public/Bs-logo.svg"
-                  alt="Bootstrap-logo"
-                  width={60}
-                />
-                <b>Bootstrap</b>
-              </li>
-            </ul>
-          )}
-        </div>
-        <div className="other-skills">
-          <h2
-            onClick={() => handleSectionChange("Otras Habilidades")}
-            className="subtitle"
-          >
-            Otras Habilidades
-          </h2>
-          {skillSection === "Otras Habilidades" && (
-            <ul className="other-skills-list">
-              <li>
-                <img
-                  src="/public/PS-logo.svg"
-                  alt="Photoshop-logo"
-                  width={60}
-                />
-                <b>Photoshop</b>
-              </li>
-              <li>
-                <img src="/public/Figma-logo.svg" alt="Figma-logo" width={40} />
-                <b>Figma</b>
-              </li>
-              <li>
-                <img
-                  src="/public/AI-logo.svg"
-                  alt="Illustrator-logo"
-                  width={62}
-                />
-                <b>Illustrator</b>
-              </li>
-              <li>
-                <img
-                  src="/public/camera.png"
-                  alt="Photography-logo"
-                  width={75}
-                />
-                <b>Fotografía</b>
-              </li>
-              <li>
-                <img src="/public/wordpress-icon.svg" alt="WordPress-logo" width={60} />
-                <b>WordPress</b>
-              </li>
-              <li>
-                <img
-                  src="/public/work-team.png"
-                  alt="Teamwork-logo"
-                  width={66}
-                />
-                <b>Colaboración</b>
-              </li>
-              <li>
-                <img
-                  src="/public/Comunicacion.png"
-                  alt="Comunicacion-logo"
-                  width={90}
-                />
-                <b>Comunicación</b>
-              </li>
-              <li>
-                <img
-                  src="/public/problemas.png"
-                  alt="Problem-solving-logo"
-                  width={70}
-                />
-                <b>Resolución de problemas</b>
-              </li>
-            </ul>
-          )}
-        </div>
+        {Object.entries(skillsData).map(([section, skills]) => (
+          <div key={section} style={{ marginBottom: "32px" }}>
+            <h2
+              onClick={() => handleSectionChange(section)}
+              className={`subtitle${skillSection === section ? " active" : ""}`}
+              style={{ cursor: "pointer" }}
+            >
+              {section}
+            </h2>
+            {skillSection === section && (
+              isMobile ? (
+                <SkillCarousel skills={skills} />
+              ) : (
+                <ul className="img-skills">
+                  {skills.map((skill) => (
+                    <li key={skill.label}>
+                      <img src={skill.img} alt={skill.alt} width={skill.width} />
+                      <b>{skill.label}</b>
+                    </li>
+                  ))}
+                </ul>
+              )
+            )}
+          </div>
+        ))}
       </div>
     </div>
   );

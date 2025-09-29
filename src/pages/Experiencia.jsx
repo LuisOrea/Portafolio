@@ -26,6 +26,7 @@ export default function Experiencia() {
   };
 
   return (
+    <>
     <div
       className={`${theme === "Light" ? "container-dark" : "container-light"}`}
     >
@@ -40,12 +41,13 @@ export default function Experiencia() {
           usuario.
         </p>
         <div className="experience-list">
-          <div>
-            <ul>
+          <div >
+            <ul className="softeek-monkey">
               <li onClick={() => handleSectionChange("Softtek")}>
                 <img
                   src="/public/Softtek-logo.png"
                   alt="Softtek-logo"
+                  className="softtek-logo"
                   width={200}
                 />
                 <b>Consultora Softtek</b>
@@ -54,6 +56,7 @@ export default function Experiencia() {
                 <img
                   src="/public/cofee-logo.png"
                   alt="Monkey-logo"
+                  className="monkey-logo"
                   width={80}
                 />
                 <b>Monkey Coffee && Bar</b>
@@ -66,6 +69,7 @@ export default function Experiencia() {
                 <img
                   src="/public/Ahorra-logo.webp"
                   alt="Ahorra-logo"
+                  className="ahorra-logo"
                   width={300}
                 />
                 <b>Ahorra Seguros</b>
@@ -74,7 +78,9 @@ export default function Experiencia() {
           </div>
         </div>
       </div>
-      <div className="experience-details">{renderModal()}</div>
     </div>
+    {renderModal()}
+    </>
+    
   );
 }
