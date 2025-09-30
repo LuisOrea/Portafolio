@@ -130,6 +130,7 @@ export default function ExperienceDetail({ experienceSection, closeModal }) {
             controls
             muted
             loop
+            autoPlay
             width={300}
           ></video>
         </div>

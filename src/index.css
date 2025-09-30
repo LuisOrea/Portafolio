@@ -397,6 +397,13 @@ ul {
   margin-bottom: 8px;
 }
 
+/* styles father container */
+
+.loader-container {
+ position: relative;
+  min-height: 400px;
+}
+
 /* styles loader */
 
 .ring {
@@ -418,6 +425,7 @@ ul {
   text-transform: uppercase;
   text-shadow: 0 0 10px #fff000;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  z-index: 1001;
 }
 .ring:before {
   content: "";

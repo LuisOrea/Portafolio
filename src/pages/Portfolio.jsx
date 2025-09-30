@@ -37,7 +37,7 @@ export default function Portfolio() {
 
   return (
     <ThemeProvider>
-      <div>
+      <div >
         <Nav
           setActiveSection={(section) => {
             setTransitioning(true);
@@ -49,9 +49,9 @@ export default function Portfolio() {
         />
         <div
           key={activeSection}
-          className={transitioning ? "slide-out" : "slide-in"}
+          className={`${transitioning ? "slide-out" : "slide-in"} loader-container`}
         >
-          {loading ? <Loader /> : renderSection()}\
+          {loading ? <Loader /> : renderSection()}
         </div>
       </div>
     </ThemeProvider>
