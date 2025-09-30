@@ -24,7 +24,7 @@ export default function ExperienceDetail({ experienceSection, closeModal }) {
         <div className="experience-modal">
           <div className="modal-header">
             <img
-              src="/public/softtek-logo.png"
+              src="/softtek-logo.png"
               alt="Softtek Logo"
               className="logo-modal"
               width={100}
@@ -88,7 +88,7 @@ export default function ExperienceDetail({ experienceSection, closeModal }) {
         <div className="experience-modal">
           <div className="modal-header">
             <img
-              src="/public/cofee-logo.png"
+              src="/cofee-logo.png"
               alt="Monkey Coffee Logo"
               className="logo-modal"
               width={80}
@@ -126,7 +126,7 @@ export default function ExperienceDetail({ experienceSection, closeModal }) {
           <h5>Evidencias de trabajo:</h5>
           <video
             className="evidencia-video"
-            src="/public/Monkey-menu.mp4"
+            src="/Monkey-menu.mp4"
             controls
             muted
             loop

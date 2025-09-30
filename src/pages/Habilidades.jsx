@@ -50,7 +50,7 @@ const skillsData = {
   ],
   "Control de Versiones": [
     { img: "/Git-logo.svg", alt: "Git-logo", label: "Git", width: 60 },
-    { img: "/public/Github-logo.svg", alt: "GitHub-logo", label: "GitHub", width: 60 },
+    { img: "/Github-logo.svg", alt: "GitHub-logo", label: "GitHub", width: 60 },
     { img: "/Bit-logo.svg", alt: "Bitbucket-logo", label: "Bitbucket", width: 60 },
   ],
   Estilos: [
