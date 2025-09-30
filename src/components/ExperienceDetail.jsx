@@ -24,7 +24,7 @@ export default function ExperienceDetail({ experienceSection, closeModal }) {
         <div className="experience-modal">
           <div className="modal-header">
             <img
-              src="/softtek-logo.png"
+              src="/Softtek-logo.png"
               alt="Softtek Logo"
               className="logo-modal"
               width={100}
