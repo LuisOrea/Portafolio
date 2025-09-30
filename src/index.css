@@ -379,6 +379,24 @@ ul {
   }
 }
 
+.img-cliente {
+  max-width: 100%;
+  width: 180px;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  transition: width 0.3s;
+  cursor: pointer;
+}
+
+.video-ahorra {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
 /* styles loader */
 
 .ring {

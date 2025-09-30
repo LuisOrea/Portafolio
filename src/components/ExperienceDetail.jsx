@@ -206,21 +206,18 @@ export default function ExperienceDetail({ experienceSection, closeModal }) {
               src="/Axa.png"
               alt="Axa"
               onClick={handleImageClick}
-              width={300}
             />
             <img
               className="img-cliente"
               src="/Banorte.png"
               alt="Banorte"
               onClick={handleImageClick}
-              width={300}
             />
             <img
               className="img-cliente"
               src="/gnp.png"
               alt="GNP"
               onClick={handleImageClick}
-              width={300}
             />
           </div>
         </div>
