@@ -13,7 +13,7 @@ export default function SobreMi() {
             : "description-container-light"
         }`}
       >
-        <img src="/public/Yo.png" alt="img-yo" className="about-image" />
+        <img src="/Yo.png" alt="img-yo" className="about-image" />
         <h1 className="title">Sobre Mi</h1>
 
         <div className="container-description"><p className="description-about">

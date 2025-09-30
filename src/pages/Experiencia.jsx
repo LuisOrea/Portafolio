@@ -45,7 +45,7 @@ export default function Experiencia() {
             <ul className="softeek-monkey">
               <li onClick={() => handleSectionChange("Softtek")}>
                 <img
-                  src="/public/Softtek-logo.png"
+                  src="/Softtek-logo.png"
                   alt="Softtek-logo"
                   className="softtek-logo"
                   width={200}
@@ -54,7 +54,7 @@ export default function Experiencia() {
               </li>
               <li onClick={() => handleSectionChange("Monkey Coffee")}>
                 <img
-                  src="/public/cofee-logo.png"
+                  src="/cofee-logo.png"
                   alt="Monkey-logo"
                   className="monkey-logo"
                   width={80}
@@ -67,7 +67,7 @@ export default function Experiencia() {
             <ul>
               <li onClick={() => handleSectionChange("Ahorra Seguros")}>
                 <img
-                  src="/public/Ahorra-logo.webp"
+                  src="/Ahorra-logo.webp"
                   alt="Ahorra-logo"
                   className="ahorra-logo"
                   width={300}

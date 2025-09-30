@@ -44,14 +44,14 @@ export default function Portfolio() {
             setTimeout(() => {
               setActiveSection(section);
               setTransitioning(false);
-            }, 600); // mismo tiempo que la animación
+            }, 600); 
           }}
         />
         <div
           key={activeSection}
           className={transitioning ? "slide-out" : "slide-in"}
         >
-          {loading ? <Loader /> : renderSection()}
+          {loading ? <Loader /> : renderSection()}\
         </div>
       </div>
     </ThemeProvider>

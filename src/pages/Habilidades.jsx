@@ -33,36 +33,36 @@ function SkillCarousel({ skills }) {
 
 const skillsData = {
   Lenguajes: [
-    { img: "/public/java-script-js-seeklogo.png", alt: "JavaScript-logo", label: "JavaScript", width: 50 },
-    { img: "/public/Java-logo.svg", alt: "Java-logo", label: "Java", width: 53.5 },
-    { img: "/public/Python-logo.svg", alt: "Python-logo", label: "Python", width: 75 },
+    { img: "/java-script-js-seeklogo.png", alt: "JavaScript-logo", label: "JavaScript", width: 50 },
+    { img: "/Java-logo.svg", alt: "Java-logo", label: "Java", width: 53.5 },
+    { img: "/Python-logo.svg", alt: "Python-logo", label: "Python", width: 75 },
   ],
   "Frameworks y Librerías": [
-    { img: "/public/React-logo.svg", alt: "React-logo", label: "React Js", width: 80 },
-    { img: "/public/Angular-logo.svg", alt: "Angular-logo", label: "Angular", width: 69 },
-    { img: "/public/Vue-js.svg", alt: "Vue-logo", label: "Vue.js", width: 85 },
-    { img: "/public/Lit-logo.svg", alt: "Lit-logo", label: "Lit Element", width: 60 },
+    { img: "/React-logo.svg", alt: "React-logo", label: "React Js", width: 80 },
+    { img: "/Angular-logo.svg", alt: "Angular-logo", label: "Angular", width: 69 },
+    { img: "/Vue-js.svg", alt: "Vue-logo", label: "Vue.js", width: 85 },
+    { img: "/Lit-logo.svg", alt: "Lit-logo", label: "Lit Element", width: 60 },
   ],
   Testing: [
-    { img: "/public/Jest-logo.svg", alt: "Jest-logo", label: "Jest Js", width: 60 },
-    { img: "/public/Mocha-logo.svg", alt: "Mocha-logo", label: "Mocha Js", width: 60 },
-    { img: "/public/Chai-logo.svg", alt: "Chai-logo", label: "Chai Js", width: 60 },
+    { img: "/Jest-logo.svg", alt: "Jest-logo", label: "Jest Js", width: 60 },
+    { img: "/Mocha-logo.svg", alt: "Mocha-logo", label: "Mocha Js", width: 60 },
+    { img: "/Chai-logo.svg", alt: "Chai-logo", label: "Chai Js", width: 60 },
   ],
   "Control de Versiones": [
-    { img: "/public/Git-logo.svg", alt: "Git-logo", label: "Git", width: 60 },
-    { img: "/public/GitHub-logo.svg", alt: "GitHub-logo", label: "GitHub", width: 60 },
-    { img: "/public/Bit-logo.svg", alt: "Bitbucket-logo", label: "Bitbucket", width: 60 },
+    { img: "/Git-logo.svg", alt: "Git-logo", label: "Git", width: 60 },
+    { img: "/public/Github-logo.svg", alt: "GitHub-logo", label: "GitHub", width: 60 },
+    { img: "/Bit-logo.svg", alt: "Bitbucket-logo", label: "Bitbucket", width: 60 },
   ],
   Estilos: [
-    { img: "/public/Tw-logo.svg", alt: "Tailwind-logo", label: "Tailwind CSS", width: 98 },
-    { img: "/public/Bs-logo.svg", alt: "Bootstrap-logo", label: "Bootstrap", width: 60 },
+    { img: "/Tw-logo.svg", alt: "Tailwind-logo", label: "Tailwind CSS", width: 98 },
+    { img: "/Bs-logo.svg", alt: "Bootstrap-logo", label: "Bootstrap", width: 60 },
   ],
   "Otras Habilidades": [
-    { img: "/public/PS-logo.svg", alt: "Photoshop-logo", label: "Photoshop", width: 60 },
-    { img: "/public/Figma-logo.svg", alt: "Figma-logo", label: "Figma", width: 40 },
-    { img: "/public/AI-logo.svg", alt: "Illustrator-logo", label: "Illustrator", width: 62 },
-    { img: "/public/camera.png", alt: "Photography-logo", label: "Fotografía", width: 75 },
-    { img: "/public/wordpress-icon.svg", alt: "WordPress-logo", label: "WordPress", width: 60 },
+    { img: "/PS-logo.svg", alt: "Photoshop-logo", label: "Photoshop", width: 60 },
+    { img: "/Figma-logo.svg", alt: "Figma-logo", label: "Figma", width: 40 },
+    { img: "/AI-logo.svg", alt: "Illustrator-logo", label: "Illustrator", width: 62 },
+    { img: "/camera.png", alt: "Photography-logo", label: "Fotografía", width: 75 },
+    { img: "/wordpress-icon.svg", alt: "WordPress-logo", label: "WordPress", width: 60 },
   ],
 };
 
