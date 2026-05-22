@@ -1,12 +1,12 @@
 import { BrowserRouter, Routes, Route } from "react-router";
-import { MessagePage } from "../pages/MessagePage";
+import { LandingPage } from "../pages/Landing";
 
 export function RoutePages() {
   return (
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<MessagePage/>} />
+          <Route path="/" element={<LandingPage/>} />
         </Routes>
       </BrowserRouter>
     </div>

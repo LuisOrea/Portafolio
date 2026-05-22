@@ -1,0 +1,6 @@
+[
+        {"id": "0", "msg": "No hay sistemas seguros, solo sistemas que aún no han sido probados."},
+        {"id":"1", "msg": "En el networking, como en la vida, si el paquete no llega, solo queda trazar la ruta y reintentar."},
+        {"id":"2", "msg": "Un experto es alguien que ha cometido todos los errores posibles en un campo muy estrecho."},
+        {"id":"3" ,"msg": "La curiosidad es la mejor herramienta de un hacker; el código es solo su lenguaje."} 
+]
