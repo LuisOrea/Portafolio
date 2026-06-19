@@ -1,6 +1,6 @@
 export default function Header() {
   return (
-    <nav className="flex justify-between h-17">
+    <nav className="flex justify-between h-17 bg-glass">
       <span className="flex items-center social-media w-2/8 p-1">
         social media here
       </span>

@@ -3,6 +3,7 @@ import About from "./About.tsx";
 import Logan from "../components/Slogan.tsx";
 import slogans from "../resources/slogans.json";
 import { useEffect, useState } from "react";
+import { Abilities } from "./Abilities.tsx";
 
 export function LandingPage() {
   const [index, setIndex] = useState(0);
@@ -32,13 +33,15 @@ export function LandingPage() {
         <video
           autoPlay
           loop
-          className="rounded-b-2xl max-h-96 w-full object-fill"
+          className=" max-h-96 w-full object-fill"
           src="/public/videos/background.mp4"
         ></video>
 
         <Logan logan={slogans[index].msg} />
 
         <About />
+
+        <Abilities />
       </div>
     </div>
   );

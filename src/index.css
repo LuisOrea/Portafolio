@@ -6,3 +6,21 @@
   font-weight: 400;
 }
 
+html {
+  background: linear-gradient(to bottom, rgb(5, 2, 26) , rgb(24, 24, 24) );
+  color: white;
+}
+
+.bg-glass {
+  background: rgba(255,255,255,0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  
+
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+
+}
+
